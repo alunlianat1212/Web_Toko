@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomly - Toko Bunga Cantik</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Elements -->
+    <div class="floating-flower floating-flower-1"><i class="fas fa-seedling"></i></div>
+    <div class="floating-flower floating-flower-2"><i class="fas fa-leaf"></i></div>
+    <div class="floating-flower floating-flower-3"><i class="fas fa-feather-alt"></i></div>
+    <div class="floating-flower floating-flower-4"><i class="fas fa-dove"></i></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-seedling"></i> Bloomly
+                <span class="brand-dot">✦</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn-icon" id="cartIcon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                    <a href="#" class="btn-icon" id="historyIcon"><i class="fas fa-clock"></i></a>
+                    <a href="#" class="btn-icon" id="heartIcon"><i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title"><i class="fas fa-seedling"></i> Bloomly</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li><a href="#home" data-bs-dismiss="offcanvas"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="#about" data-bs-dismiss="offcanvas"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                <li><a href="#products" data-bs-dismiss="offcanvas"><i class="fas fa-seedling"></i> Produk</a></li>
+                <li><a href="#testimonials" data-bs-dismiss="offcanvas"><i class="fas fa-comment"></i> Testimoni</a></li>
+                <li><a href="#contact" data-bs-dismiss="offcanvas"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/rose.jpg" class="d-block w-100" alt="Rose Flowers">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Bunga Segar<br>Untuk Momen Spesial</h1>
+                        <p class="lead">Hadirkan keindahan alam ke dalam hidup Anda</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/lily.jpg" class="d-block w-100" alt="Tulip Flowers">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Buket Tulip<br>Cantik & Elegan</h1>
+                        <p class="lead">Rangkaian tulip segar dari kebun Belanda</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/lavender.jpg" class="d-block w-100" alt="Lavender">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Lavender<br>Aromaterapi Alami</h1>
+                        <p class="lead">Aroma menenangkan untuk hari yang damai</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/sun.jpg" class="d-block w-100" alt="Sunflower">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Sunny Sunflower<br>Ceria & Cerah</h1>
+                        <p class="lead">Bawa keceriaan dengan bunga matahari</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/sakura.jpg" class="d-block w-100" alt="Cherry Blossom">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Cherry Blossom<br>Romantis & Anggun</h1>
+                        <p class="lead">Keindahan musim semi dalam buket</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 120" fill="none">
+                <path d="M0 32L48 42.7C96 53.3 192 74.7 288 80C384 85.3 480 74.7 576 64C672 53.3 768 42.7 864 48C960 53.3 1056 74.7 1152 80C1248 85.3 1344 74.7 1392 69.3L1440 64V120H0V32Z" fill="#F9F5FF"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="subtitle">Tentang Kami</span>
+                <h2 class="section-title">Menyebarkan <span class="gradient-text">Kebahagiaan</span><br>Melalui Bunga</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <img src="image/flower.jpg" alt="Florist" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3>Setiap Bunga Bercerita</h3>
+                    <p>Bloomly hadir sejak 2019 dengan misi menyebarkan kebahagiaan melalui keindahan bunga. Kami bekerja sama dengan petani bunga lokal untuk menyediakan bunga segar berkualitas terbaik.</p>
+                    <div class="feature-list mt-4">
+                        <div class="feature-item"><i class="fas fa-check-circle"></i><div><h5>Bunga Segar</h5><p>Dipetik langsung dari kebun setiap pagi</p></div></div>
+                        <div class="feature-item"><i class="fas fa-check-circle"></i><div><h5>Pengiriman Cepat</h5><p>Sampai dalam kondisi sempurna</p></div></div>
+                        <div class="feature-item"><i class="fas fa-check-circle"></i><div><h5>Desain Eksklusif</h5><p>Rangkaian unik buatan florist profesional</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="subtitle">Koleksi Kami</span>
+                <h2 class="section-title">Rangkaian <span class="gradient-text">Bunga Terbaik</span></h2>
+            </div>
+            <div class="row" id="products-list"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="subtitle">Testimoni</span>
+                <h2 class="section-title">Apa Kata <span class="gradient-text">Pelanggan</span></h2>
+            </div>
+            <div class="row" id="testimonials-list"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="subtitle">Hubungi Kami</span>
+                    <h2 class="section-title text-start">Ada yang <span class="gradient-text">Bisa Kami Bantu?</span></h2>
+                    <div class="contact-info">
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h6>Alamat</h6><p>Jl. Bunga Indah No. 123, Jakarta</p></div></div>
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h6>Telepon</h6><p>+62 812 3456 7890</p></div></div>
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h6>Email</h6><p>hello@bloomly.com</p></div></div>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3"><input type="text" class="form-control" id="contactName" placeholder="Nama Anda" required></div>
+                            <div class="col-md-6 mb-3"><input type="email" class="form-control" id="contactEmail" placeholder="Email" required></div>
+                        </div>
+                        <div class="mb-3"><input type="text" class="form-control" id="contactSubject" placeholder="Subjek"></div>
+                        <div class="mb-3"><textarea class="form-control" id="contactMessage" rows="5" placeholder="Pesan" required></textarea></div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="text-center mb-3">📍 Lokasi Toko Kami</h4>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="floating-hearts">
+            <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-seedling"></i> Bloomly</h5>
+                    <p>Membawa keindahan alam ke setiap momen spesial Anda.</p>
+                    <div class="footer-badge">
+                        <span>✨ 100% Fresh</span>
+                        <span>🌿 Eco Friendly</span>
+                        <span>💝 Handmade</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Tentang Kami</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Cara Pemesanan</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Email Anda" id="newsletterEmail">
+                        <button class="btn btn-primary" type="button" id="newsletterBtn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="footer-cute mt-3">
+                        <span>🌸 Follow us for daily flowers 🌸</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Bloomly | Made with <i class="fas fa-heart" style="color: #C3B1E1;"></i> for flower lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

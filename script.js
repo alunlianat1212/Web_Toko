@@ -1,21 +1,21 @@
 // ========== DATA PRODUK ==========
 const products = [
-    { id: 1, name: "Romantic Rose", price: 350000, oldPrice: 450000, image: "image/rose.jpg", category: "Romantic", rating: 5, isBestSeller: true },
-    { id: 2, name: "Lavender Dreams", price: 280000, oldPrice: 380000, image: "image/lavender.jpg", category: "Lavender", rating: 4.5, isBestSeller: false },
-    { id: 3, name: "Sunny Sunflower", price: 220000, oldPrice: 320000, image: "image/sun.jpg", category: "Sunflower", rating: 5, isBestSeller: true },
-    { id: 4, name: "Elegant Lily", price: 380000, oldPrice: 480000, image: "image/lily.jpg", category: "Elegant", rating: 5, isBestSeller: false },
-    { id: 5, name: "Cherry Blossom", price: 320000, oldPrice: 420000, image: "image/sakura.jpg", category: "Cherry", rating: 4.5, isBestSeller: true },
-    { id: 6, name: "Purple Orchid", price: 420000, oldPrice: 550000, image: "image/anggrek.jpg", category: "Orchid", rating: 5, isBestSeller: false }
+    { id: 1, name: "Romantic Rose", price: 350000, oldPrice: 450000, image: "rose.jpg", category: "Romantic", rating: 5, isBestSeller: true },
+    { id: 2, name: "Lavender Dreams", price: 280000, oldPrice: 380000, image: "lavender.jpg", category: "Lavender", rating: 4.5, isBestSeller: false },
+    { id: 3, name: "Sunny Sunflower", price: 220000, oldPrice: 320000, image: "sun.jpg", category: "Sunflower", rating: 5, isBestSeller: true },
+    { id: 4, name: "Elegant Lily", price: 380000, oldPrice: 480000, image: "lily.jpg", category: "Elegant", rating: 5, isBestSeller: false },
+    { id: 5, name: "Cherry Blossom", price: 320000, oldPrice: 420000, image: "sakura.jpg", category: "Cherry", rating: 4.5, isBestSeller: true },
+    { id: 6, name: "Purple Orchid", price: 420000, oldPrice: 550000, image: "anggrek.jpg", category: "Orchid", rating: 5, isBestSeller: false }
 ];
 
 // ========== DATA TESTIMONI ==========
 const testimonials = [
-    { id: 1, name: "M. Fajar Sahaputra", image: "image/mixxiw.jpg", text: "Bunga yang saya pesan sangat segar dan cantik! Pengiriman tepat waktu, packing rapi. Sangat recommended!", rating: 5 },
-    { id: 2, name: "Mandalika Puspa Sakartika", image: "image/legoo.jpg", text: "Pelayanannya ramah, rangkaian bunganya indah banget. Harga bersaing dan sesuai dengan kualitas. Makasih Bloomly!", rating: 5 },
-    { id: 3, name: "William Jaka Pratama", image: "image/willii.jpg", text: "Website nya mudah digunakan, proses checkout cepat. Bunganya fresh dan tahan lama. Puas sekali!", rating: 4.5 },
-    { id: 4, name: "Bonnie Efrike Stefiana", image: "image/bonnie.jpg", text: "Buket bunganya super cantik! Pacar saya sangat suka. Terima kasih Bloomly!", rating: 5 },
-    { id: 5, name: "Maulana Wahidin Akbar", image: "image/first.jpg", text: "Pengiriman cepat, bunga harum dan segar. Saya akan order lagi pasti!", rating: 5 },
-    { id: 6, name: "Jemima Nazuella Putri", image: "image/nana.jpg", text: "Bunganya mekar sempurna, wangi yang membawa kebahagiaan. Terima kasih!", rating: 5 }
+    { id: 1, name: "M. Fajar Sahaputra", image: "mixxiw.jpg", text: "Bunga yang saya pesan sangat segar dan cantik! Pengiriman tepat waktu, packing rapi. Sangat recommended!", rating: 5 },
+    { id: 2, name: "Mandalika Puspa Sakartika", image: "legoo.jpg", text: "Pelayanannya ramah, rangkaian bunganya indah banget. Harga bersaing dan sesuai dengan kualitas. Makasih Bloomly!", rating: 5 },
+    { id: 3, name: "William Jaka Pratama", image: "willii.jpg", text: "Website nya mudah digunakan, proses checkout cepat. Bunganya fresh dan tahan lama. Puas sekali!", rating: 4.5 },
+    { id: 4, name: "Bonnie Efrike Stefiana", image: "bonnie.jpg", text: "Buket bunganya super cantik! Pacar saya sangat suka. Terima kasih Bloomly!", rating: 5 },
+    { id: 5, name: "Maulana Wahidin Akbar", image: "first.jpg", text: "Pengiriman cepat, bunga harum dan segar. Saya akan order lagi pasti!", rating: 5 },
+    { id: 6, name: "Jemima Nazuella Putri", image: "nana.jpg", text: "Bunganya mekar sempurna, wangi yang membawa kebahagiaan. Terima kasih!", rating: 5 }
 ];
 
 // ========== KERANJANG (LOCAL STORAGE) ==========
